@@ -81,23 +81,11 @@ export default function App() {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.userConsentContainer}>
-        <CheckBox
-          disabled={false}
-          value={userConsent}
-          onValueChange={(state) => {
-            setUserConsent(state);
-            onToggleUserConsent(state);
-          }}
-        />
-        <View style={styles.smallSpace} />
-        <Text>Toggle User Consent</Text>
-      </View>
       <Text style={styles.title}>
         Select the trackers to initialize Device Risk
       </Text>
       <View style={styles.list}>
-        {userConsent > 0 && (
+        {(
           <FlatList
             data={Object.keys(RnDeviceRisk.getConstants())}
             renderItem={buildItem}
