@@ -10,6 +10,7 @@ Make sure you have following components installed
 
 ### Install dependencies
 ```
+yarn upgrade react-native-device-risk
 yarn install
 ```
 
