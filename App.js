@@ -16,13 +16,8 @@ import Snackbar from 'react-native-snackbar';
 import RnDeviceRisk from 'react-native-device-risk';
 
 export default function App() {
-  const [userConsent, setUserConsent] = React.useState(false);
   const [trackers, addTracker] = React.useState([]);
   const [isSending, setSendingData] = React.useState(false);
-
-  const onToggleUserConsent = (state) => {
-    RnDeviceRisk.toggleUserConsent(state);
-  };
 
   const onInitialize = async () => {
     try {
@@ -45,7 +40,7 @@ export default function App() {
   const onSendData = async () => {
     try {
       setSendingData(true);
-      const res = await RnDeviceRisk.sendData();
+      const res = await RnDeviceRisk.sendDataWithContext("homepage");
       const { deviceRiskSessionId } = res;
       Alert.alert('Success', `Device Risk Sesison ID: ${deviceRiskSessionId}`);
     } catch (error) {
@@ -127,14 +122,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingTop: 8,
-  },
-  userConsentContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderWidth: 1,
-    paddingHorizontal: 16,
-    marginVertical: 8,
-    borderRadius: 10,
   },
   smallSpace: {
     ...Platform.select({
