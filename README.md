@@ -10,9 +10,9 @@ Make sure you have following components installed
 
 ### Install dependencies
 #### Specify SDK version
-Please specify the desired SDK version in your `package.json`. For example, here is how specify version `1.2.1` (tag)
+Please specify the desired SDK version in your `package.json`. For example, here is how specify version `2.0.0` (tag)
 ```
-"react-native-device-risk": "https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#1.2.1",
+"react-native-device-risk": "https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#2.0.0",
 ```
 
 #### Upgrade and install
