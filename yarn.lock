@@ -5462,9 +5462,9 @@ react-native-codegen@^0.69.2:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
-"react-native-device-risk@https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#2.0.0":
-  version "2.0.0"
-  resolved "https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#7dbd80f4110c3fd892a26d9222c6209a1dd94a5f"
+"react-native-device-risk@https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#2.0.3":
+  version "2.0.3"
+  resolved "https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native#bbd149473eddf242af0839993641589d3e9b5f11"
 
 react-native-gradle-plugin@^0.0.7:
   version "0.0.7"
