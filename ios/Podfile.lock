@@ -284,9 +284,9 @@ PODS:
   - React-jsinspector (0.69.5)
   - React-logger (0.69.5):
     - glog
-  - react-native-device-risk (2.0.3):
+  - react-native-device-risk (3.0.0):
     - React-Core
-    - SocureDeviceRisk (~> 2.0.3)
+    - SocureDeviceRisk (~> 3.0.0)
   - React-perflogger (0.69.5)
   - React-RCTActionSheet (0.69.5):
     - React-Core/RCTActionSheetHeaders (= 0.69.5)
@@ -358,9 +358,7 @@ PODS:
   - RNSnackbar (2.4.0):
     - React-Core
   - SocketRocket (0.6.0)
-  - SocureDeviceRisk (2.0.3):
-    - TrustKit
-  - TrustKit (2.0.1)
+  - SocureDeviceRisk (3.0.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -444,7 +442,6 @@ SPEC REPOS:
     - OpenSSL-Universal
     - SocketRocket
     - SocureDeviceRisk
-    - TrustKit
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -552,7 +549,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: e42f0b46de293a026c2fb20e524d4fe09f81f575
   React-jsinspector: e385fb7a1440ae3f3b2cd1a139ca5aadaab43c10
   React-logger: 15c734997c06fe9c9b88e528fb7757601e7a56df
-  react-native-device-risk: d785a27eff11e3303c4d56ece732e43b47d73e32
+  react-native-device-risk: 178ae3ea83460eac863033c75c961523201aec16
   React-perflogger: 367418425c5e4a9f0f80385ee1eaacd2a7348f8e
   React-RCTActionSheet: e4885e7136f98ded1137cd3daccc05eaed97d5a6
   React-RCTAnimation: 7c5a74f301c9b763343ba98a3dd776ed2676993f
@@ -568,11 +565,10 @@ SPEC CHECKSUMS:
   RNCCheckbox: ed1b4ca295475b41e7251ebae046360a703b6eb5
   RNSnackbar: be3333a21a453ccc272f41a8add5a71f7d44dfcd
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
-  SocureDeviceRisk: 8edf6bfec248d3249ccbdce1f8b21a117e61deaf
-  TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
+  SocureDeviceRisk: 5c602cd0bfa1f1de462f365358ea3851a3af1e7e
   Yoga: c2b1f2494060865ac1f27e49639e72371b1205fa
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 871418c16137e36d60878af4bba67ec3b66af024
+PODFILE CHECKSUM: aa18777b8ad9f44a1892c0a4422d9cf961a72dbb
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1
