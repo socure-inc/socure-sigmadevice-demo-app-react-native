@@ -12,6 +12,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { RnSigmaDevice } from 'react-native-device-risk';
+import { SDKConfig } from './config';
 
 export default function App() {
   var [resultText, setResultText] = React.useState("Results will be shown here.");
@@ -21,13 +22,10 @@ export default function App() {
     try {
       setSendingData(true);
       setResultText("Uploading data ...")
-      const config = {
-        "SDKKey": "Replace this with your SDK Key"
-      }
       const options = {
         "context": "homepage"
       }
-      const res = await RnSigmaDevice.fingerprint(config, options);
+      const res = await RnSigmaDevice.fingerprint(SDKConfig, options);
       const { deviceSessionId } = res;
       setResultText("Device session ID :: " + deviceSessionId);
     } catch (error) {
