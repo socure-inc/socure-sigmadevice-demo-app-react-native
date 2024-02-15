@@ -11,12 +11,6 @@ Make sure you have following components installed
 ### Install dependencies
 
 ```
-npm install --save react-native-device-risk
-```
-
-#### Upgrade and install
-```
-yarn upgrade react-native-device-risk
 yarn install
 ```
 

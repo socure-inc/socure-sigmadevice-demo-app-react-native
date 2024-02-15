@@ -1,33 +1,45 @@
-import * as React from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
 import {
   StyleSheet,
   View,
   Text,
-  FlatList,
   TouchableOpacity,
   Alert,
   ActivityIndicator,
-  Platform,
   SafeAreaView,
 } from 'react-native';
 import { RnSigmaDevice } from 'react-native-device-risk';
 import { SDKConfig } from './config';
 
 export default function App() {
-  var [resultText, setResultText] = React.useState("Results will be shown here.");
-  const [isSending, setSendingData] = React.useState(false);
+  var [resultText, setResultText] = useState("Results will be shown here.");
+  const [isSending, setSendingData] = useState(false);
 
+  // Initialize the SDK
+  const initializeSDK = async () => {
+   try {
+      const res = await RnSigmaDevice.initializeSDK(SDKConfig.SDKKey, null);
+      setResultText("Session Token :: " + res.sessionToken);
+    } catch (error) {
+      Alert.alert('Failed', `${error}`);
+    }  
+  }
+
+  useEffect(()=>{
+    console.log("initializing the SDK");
+    initializeSDK();
+  }, [])
+  
   const onSendData = async () => {
     try {
       setSendingData(true);
       setResultText("Uploading data ...")
-      const options = {
-        "context": "homepage"
-      }
-      const res = await RnSigmaDevice.fingerprint(SDKConfig, options);
-      const { deviceSessionId } = res;
-      setResultText("Device session ID :: " + deviceSessionId);
+      const res = await RnSigmaDevice.processDevice("homepage");
+      setResultText("Session Token :: " + res.sessionToken);
     } catch (error) {
       Alert.alert('Failed', `${error}`);
     } finally {
@@ -38,7 +50,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>
-        Fingerprint
+        SigmaDeviceRisk
       </Text>
       <TouchableOpacity style={styles.actionButton} onPress={onSendData}>
         <Text style={styles.actionButtonLabel}>Upload device data</Text>
