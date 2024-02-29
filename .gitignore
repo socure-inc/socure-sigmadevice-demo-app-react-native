@@ -29,6 +29,7 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 **/xcshareddata/WorkspaceSettings.xcsettings
+ios/.xcode.env.local
 
 # Android/IJ
 #

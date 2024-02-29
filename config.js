@@ -1,3 +1,3 @@
 export const SDKConfig = {
-    "SDKKey": "Replace this with your SDK Key"
-}
+  SDKKey: 'Replace this with your SDK Key',
+};
