@@ -21,12 +21,16 @@ export default function App() {
     try {
       setResultText('Initializing the SDK...');
 
-      const options = {
-        omitLocationData: false,
-        useSocureGov: false,
+      const sigmaDeviceOptions = {
+        advertisingID: SDKConfig.advertisingID,
+        omitLocationData: SDKConfig.omitLocationData,
+        useSocureGov: SDKConfig.useSocureGov,
       };
 
-      const res = await RnSigmaDevice.initializeSDK(SDKConfig.SDKKey, options);
+      const res = await RnSigmaDevice.initializeSDK(
+        SDKConfig.SDKKey,
+        sigmaDeviceOptions,
+      );
       setResultText('Session Token :: ' + res.sessionToken);
     } catch (error) {
       Alert.alert('Failed', `${error}`);
