@@ -3,4 +3,5 @@ export const SDKConfig = {
   advertisingID: null,
   omitLocationData: false,
   useSocureGov: false,
+  configBaseUrl: null,
 };

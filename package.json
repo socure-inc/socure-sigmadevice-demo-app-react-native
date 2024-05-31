@@ -10,9 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@socure-inc/react-native-device-risk": "4.2.0",
     "react": "18.2.0",
     "react-native": "0.72.8",
-    "react-native-device-risk": "4.1.3",
     "react-native-svg-transformer": "1.3.0"
   },
   "devDependencies": {
