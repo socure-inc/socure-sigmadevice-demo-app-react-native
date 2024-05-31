@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
-import { RnSigmaDevice } from 'react-native-device-risk';
+import { RnSigmaDevice } from '@socure-inc/react-native-device-risk';
 import { SDKConfig } from './config';
 
 export default function App() {
@@ -25,6 +25,7 @@ export default function App() {
         advertisingID: SDKConfig.advertisingID,
         omitLocationData: SDKConfig.omitLocationData,
         useSocureGov: SDKConfig.useSocureGov,
+        configBaseUrl: SDKConfig.configBaseUrl,
       };
 
       const res = await RnSigmaDevice.initializeSDK(
@@ -32,6 +33,7 @@ export default function App() {
         sigmaDeviceOptions,
       );
       setResultText('Session Token :: ' + res.sessionToken);
+      console.log('Session Token :: ' + res.sessionToken);
     } catch (error) {
       Alert.alert('Failed', `${error}`);
     }
