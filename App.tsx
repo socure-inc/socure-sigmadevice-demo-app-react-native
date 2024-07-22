@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
-import { RnSigmaDevice } from '@socure-inc/react-native-device-risk';
+import { RnSigmaDevice, SigmaDeviceOptions } from '@socure-inc/react-native-device-risk';
 import { SDKConfig } from './config';
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
     try {
       setResultText('Initializing the SDK...');
 
-      const sigmaDeviceOptions = {
+      const sigmaDeviceOptions: SigmaDeviceOptions = {
         advertisingID: SDKConfig.advertisingID,
         omitLocationData: SDKConfig.omitLocationData,
         useSocureGov: SDKConfig.useSocureGov,
@@ -29,7 +29,7 @@ export default function App() {
       };
 
       const res = await RnSigmaDevice.initializeSDK(
-        SDKConfig.SDKKey,
+        SDKConfig.sdkKey,
         sigmaDeviceOptions,
       );
       setResultText('Session Token :: ' + res.sessionToken);
