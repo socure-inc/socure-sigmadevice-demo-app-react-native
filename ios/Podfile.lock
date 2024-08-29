@@ -375,7 +375,7 @@ PODS:
   - React-jsinspector (0.72.12)
   - React-logger (0.72.12):
     - glog
-  - react-native-device-risk (4.3.2):
+  - react-native-device-risk (4.3.3):
     - React-Core
     - SocureDeviceRisk (~> 4.3.1)
   - React-NativeModulesApple (0.72.12):
@@ -695,7 +695,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 95bdf0ab46024ca9849e08739b6abd8fe489cd33
   React-jsinspector: 8e291ed0ab371314de269001d6b9b25db6aabf42
   React-logger: d4010de0b0564e63637ad08373bc73b5d919974b
-  react-native-device-risk: 3a18187d1bb816ea7f202da1b6231519c63442cd
+  react-native-device-risk: eb26e7414306ff9f6133037c29810877caf25fce
   React-NativeModulesApple: 694679e4193a49c09f0a76ee27ec09b2c466d59c
   React-perflogger: 63606aeab27683112e1bd4ef25bd099ec1cb03f8
   React-RCTActionSheet: 5b39fc2b479d47325e5ac95193c482044bfebbc6
