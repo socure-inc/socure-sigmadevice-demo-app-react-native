@@ -38,9 +38,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "main": "index.js",
-  "repository": "git@gitlab.us-east-1.build.socure.link:product/dvc/sdk/public/socure-sigmadevice-demo-app-react-native.git",
-  "author": "rajkumar <rajkumar.rajasekaran@socure.com>",
-  "license": "MIT"
+  }
 }
