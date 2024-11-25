@@ -375,9 +375,9 @@ PODS:
   - React-jsinspector (0.72.12)
   - React-logger (0.72.12):
     - glog
-  - react-native-device-risk (4.3.5):
+  - react-native-device-risk (4.4.1):
     - React-Core
-    - SocureDeviceRisk (~> 4.3.3)
+    - SocureDeviceRisk (~> 4.4.0)
   - React-NativeModulesApple (0.72.12):
     - hermes-engine
     - React-callinvoker
@@ -489,7 +489,7 @@ PODS:
     - React-logger (= 0.72.12)
     - React-perflogger (= 0.72.12)
   - SocketRocket (0.6.1)
-  - SocureDeviceRisk (4.3.3)
+  - SocureDeviceRisk (4.4.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -695,7 +695,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 95bdf0ab46024ca9849e08739b6abd8fe489cd33
   React-jsinspector: 8e291ed0ab371314de269001d6b9b25db6aabf42
   React-logger: d4010de0b0564e63637ad08373bc73b5d919974b
-  react-native-device-risk: 44979b799ac69424f2822ad2d8bf298f8293ba4b
+  react-native-device-risk: 65f3973d1e03def8e31da0d4a5993b7917b61dbc
   React-NativeModulesApple: 694679e4193a49c09f0a76ee27ec09b2c466d59c
   React-perflogger: 63606aeab27683112e1bd4ef25bd099ec1cb03f8
   React-RCTActionSheet: 5b39fc2b479d47325e5ac95193c482044bfebbc6
@@ -714,10 +714,10 @@ SPEC CHECKSUMS:
   React-utils: 9a24cb88f950d1020ee55bddacbc8c16a611e2dc
   ReactCommon: 76843a9bb140596351ac2786257ac9fe60cafabb
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SocureDeviceRisk: b673d2215b4e0a3055c63122f154c1376eb12578
+  SocureDeviceRisk: 1703dc63b0e336d4f522d596a4d9777063634293
   Yoga: 87e59f6d458e5061d2421086c5de994b3f7cd151
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: f56518677db8a976c80f40632a518f8d8cdbc7e5
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
