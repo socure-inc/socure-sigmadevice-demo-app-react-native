@@ -4,4 +4,5 @@ export const SDKConfig = {
   omitLocationData: false,
   useSocureGov: false,
   configBaseUrl: undefined,
+  customerSessionId: undefined,
 };

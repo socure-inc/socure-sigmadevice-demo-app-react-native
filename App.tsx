@@ -26,6 +26,7 @@ export default function App() {
         omitLocationData: SDKConfig.omitLocationData,
         useSocureGov: SDKConfig.useSocureGov,
         configBaseUrl: SDKConfig.configBaseUrl,
+        customerSessionId: SDKConfig.customerSessionId,
       };
 
       const res = await RnSigmaDevice.initializeSDK(
