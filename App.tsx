@@ -9,7 +9,10 @@ import {
   ActivityIndicator,
   SafeAreaView,
 } from 'react-native';
-import { RnSigmaDevice, SigmaDeviceOptions } from '@socure-inc/react-native-device-risk';
+import {
+  RnSigmaDevice,
+  SigmaDeviceOptions,
+} from '@socure-inc/react-native-device-risk';
 import { SDKConfig } from './config';
 
 export default function App() {
