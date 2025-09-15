@@ -2361,10 +2361,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@socure-inc/react-native-device-risk@4.6.1":
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/@socure-inc/react-native-device-risk/-/react-native-device-risk-4.6.1.tgz#de5f6c2ba3bb7f4e3a57f974bcd6b2c7b4f2e37d"
-  integrity sha512-WwAHEuGY2VOEqOCfkMhhzAg5iAvP8cJ5hWIMM2WHCreVL4n7ryJCT/aYf7+jxqKuRltrWfA14CCOA2fWTJ2klA==
+"@socure-inc/react-native-device-risk@4.6.2":
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/@socure-inc/react-native-device-risk/-/react-native-device-risk-4.6.2.tgz#b6662036d3a8fcf218653656caed975e875adb8b"
+  integrity sha512-QUgl9CRfGH/DWH//RADr6vS+QoDfADrfciXyegURMLgKU9BiTWSqzmvYxgyboSZiojqxwPYGB9mfrVfzMnUhng==
 
 "@svgr/babel-plugin-add-jsx-attribute@8.0.0":
   version "8.0.0"
