@@ -1,7 +1,13 @@
-## About
-This demo app demonstrates the usage of [socure-sigmadevice-wrapper-react-native](https://github.com/socure-inc/socure-sigmadevice-wrapper-react-native) library.
+# Socure Device Risk SDK React Native Bridge
 
-## Run the app
+The Socure Device Risk SDK React Native bridge provides Reach developers with the ability to call the Socure Device Risk SDK, either the [Android](https://github.com/socure-inc/socure-sigmadevice-sdk-android) or [iOS](https://github.com/socure-inc/socure-sigmadevice-sdk-ios) native library variants, through React.
+
+## Latest Release
+
+[![GitHub release](https://img.shields.io/github/v/release/socure-inc/socure-sigmadevice-demo-app-react-native)](https://github.com/socure-inc/socure-sigmadevice-demo-app-react-native/releases/latest)
+
+
+## Run the sample app
 ### Prerequisites
 Make sure you have following components installed
 * Xcode
@@ -35,3 +41,6 @@ react-native run-android
 ```
 
 **Note:** This project requires Java 17 for Android builds. Make sure to set the JAVA_HOME environment variable accordingly.
+
+## Configuration and usage
+For instructions on how to configure the SDK, see the [React Native documentation](https://developer.socure.com/docs/sdks/digital-intelligence/react-native-wrapper) on DevHub.
