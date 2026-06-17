@@ -21,7 +21,7 @@ yarn install
 ```
 
 ### SDK key
-Update the `SDKKey` in `config.js`.
+Update the `sdkKey` in `config.ts`.
 
 ### Platform
 #### iOS
@@ -32,7 +32,7 @@ cd ios && NO_FLIPPER=1 pod install && cd ..
 react-native run-ios
 ```
 
-**Note:** The `NO_FLIPPER=1` environment variable is automatically set in `.xcode.env.local` to ensure Flipper is disabled for all builds.
+**Note:** Pass `NO_FLIPPER=1` when you run `pod install`, as shown in the previous command. The `ios/Podfile` reads this variable to disable Flipper for the build.
 
 #### Android
 ```
