@@ -315,9 +315,9 @@ PODS:
   - React-jsinspector (0.72.12)
   - React-logger (0.72.12):
     - glog
-  - react-native-device-risk (4.8.0):
+  - react-native-device-risk (4.9.0):
     - React-Core
-    - SocureDeviceRisk (~> 4.8.1)
+    - SocureDeviceRisk (~> 4.9.0)
   - React-NativeModulesApple (0.72.12):
     - hermes-engine
     - React-callinvoker
@@ -429,7 +429,7 @@ PODS:
     - React-logger (= 0.72.12)
     - React-perflogger (= 0.72.12)
   - SocketRocket (0.6.1)
-  - SocureDeviceRisk (4.8.1)
+  - SocureDeviceRisk (4.9.0)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -575,28 +575,28 @@ SPEC CHECKSUMS:
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: e89344b9e9e54351c3c5cac075e0275148fb37ba
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
+  RCT-Folly: 8dc08ca5a393b48b1c523ab6220dfdcc0fe000ad
   RCTRequired: b6cea797b684c6d8d82ba0107cef58cbb679afdb
   RCTTypeSafety: d2eb5e0e8af9181b24034f5171f9b659994b4678
   React: e5aafc4c18040e8fbe0870a1f6df890d35f5af1d
   React-callinvoker: d345fd762faa4a3d371aedf40332abb09746ca03
-  React-Codegen: 821ca0b8a9fb023eef3faab61afd2390658c8f1c
-  React-Core: 6e27275ea4a91992f488bcc9c8575ffb564b504b
-  React-CoreModules: 6cb0798606e69b33e8271a9da526e3d674bedb2c
-  React-cxxreact: 63436ba2c7811121ca978ce60d49aa8786322726
+  React-Codegen: 443faf20ffb1610d6737ea051cc7cda262e7f122
+  React-Core: 6986970a7b4a2227531b0cda507c3cdf6e1cdf5c
+  React-CoreModules: 0553b91da99512251069cf6a07497f944526bf47
+  React-cxxreact: 640f7e389c4f12c613c9afa31ff5fe0bec9511d1
   React-debug: b29cfcf06c990f0ea4b3d6430996baa71dd676af
-  React-hermes: 077b82c248fe8e698820717a1d240c8502150c31
-  React-jsi: 42edc74ef0479952c32c8659563ab9cd62353a75
-  React-jsiexecutor: 95bdf0ab46024ca9849e08739b6abd8fe489cd33
+  React-hermes: 74e6a0ff6e58aca73fe9507727a0415e23b258b9
+  React-jsi: ae12d2de825deef00aace8652e6ed182c8b229d4
+  React-jsiexecutor: a0d38e73271d6fd4a5139c5e38bcf81c17437da4
   React-jsinspector: 8e291ed0ab371314de269001d6b9b25db6aabf42
-  React-logger: d4010de0b0564e63637ad08373bc73b5d919974b
-  react-native-device-risk: 14feb56e59a24acb07f9919b25d237e6841c70a6
-  React-NativeModulesApple: 694679e4193a49c09f0a76ee27ec09b2c466d59c
+  React-logger: 46eac23bef040a760f9e629ffa005b9089f342fb
+  react-native-device-risk: aed2075f4c87eee2176998048e1a4b3243eb7f70
+  React-NativeModulesApple: 828bba25c52f8c7be4672ac43e1c5e6af99c36d5
   React-perflogger: 63606aeab27683112e1bd4ef25bd099ec1cb03f8
   React-RCTActionSheet: 5b39fc2b479d47325e5ac95193c482044bfebbc6
   React-RCTAnimation: d684a1de0e20c53e31376738839d1cda56b60486
-  React-RCTAppDelegate: 3099e9aebf2f821503e65432e09a9423a37d767a
-  React-RCTBlob: 0dcf271322ba0c0406fcd4a3f87cd7d951dfcc37
+  React-RCTAppDelegate: 1f35b90af6d1efc6afabf3dcf0afc8a8528b665d
+  React-RCTBlob: b8c771afcf44cab4407fd935691ff152f93b64e7
   React-RCTImage: b8bfa9ed1eecc7bb96d219f8a01f569d490f34fc
   React-RCTLinking: 32c9b7af01937d911010d8ab1963147e31766190
   React-RCTNetwork: c58ad73a25aa6b35258b6c59c0a24018c329fe96
@@ -605,11 +605,11 @@ SPEC CHECKSUMS:
   React-RCTVibration: ff75e7530a22dc80a27fffdc07a2785d6bdf4f8e
   React-rncore: 52247442683082756b2fb3de145fb8149f15d1f6
   React-runtimeexecutor: 1c5219c682091392970608972655001103c27d21
-  React-runtimescheduler: 8aea338c561b2175f47018124c076d89d3808d30
-  React-utils: 9a24cb88f950d1020ee55bddacbc8c16a611e2dc
-  ReactCommon: 76843a9bb140596351ac2786257ac9fe60cafabb
+  React-runtimescheduler: c10576dd5b9fc8bcc6941f75112d33a87623bcc8
+  React-utils: 782b267a46d1fb9599a473730283c88ad1bc94b3
+  ReactCommon: 188eadc9629142a4a1a271698de555443d8a29c0
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  SocureDeviceRisk: 34def463ce1da43c5caae57f9dc09e6f065e2f05
+  SocureDeviceRisk: f6f11b630c61388f260279b2ad3b395b1c6d05ba
   Yoga: 87e59f6d458e5061d2421086c5de994b3f7cd151
 
 PODFILE CHECKSUM: f56518677db8a976c80f40632a518f8d8cdbc7e5

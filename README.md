@@ -21,7 +21,7 @@ yarn install
 ```
 
 ### SDK key
-Update the `SDKKey` in `config.js`.
+Update the `sdkKey` value in the `SDKConfig` object in `config.ts`.
 
 ### Platform
 #### iOS
