@@ -18,6 +18,7 @@ Make sure you have following components installed
 
 ```
 yarn install
+bundle install
 ```
 
 ### SDK key
@@ -27,7 +28,7 @@ Update the `sdkKey` value in the `SDKConfig` object in `config.ts`.
 #### iOS
 
 ```
-cd ios && pod install && cd ..
+cd ios && bundle exec pod install && cd ..
 react-native run-ios
 ```
 

@@ -42,6 +42,9 @@ android.iml
 #
 **/Pods
 
+# Ruby / Bundler (CocoaPods installed via `bundle exec pod install`)
+vendor/bundle
+
 # node.js
 #
 node_modules/
