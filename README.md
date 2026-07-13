@@ -18,6 +18,7 @@ Make sure you have following components installed
 
 ```
 yarn install
+bundle install
 ```
 
 ### SDK key
@@ -25,14 +26,11 @@ Update the `sdkKey` value in the `SDKConfig` object in `config.ts`.
 
 ### Platform
 #### iOS
-**Important:** This project is configured to disable Flipper by default to avoid unnecessary dependencies.
 
 ```
-cd ios && NO_FLIPPER=1 pod install && cd ..
+cd ios && bundle exec pod install && cd ..
 react-native run-ios
 ```
-
-**Note:** The `NO_FLIPPER=1` environment variable is automatically set in `.xcode.env.local` to ensure Flipper is disabled for all builds.
 
 #### Android
 ```
