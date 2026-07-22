@@ -1237,9 +1237,9 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-device-risk (4.9.1):
+  - react-native-device-risk (4.10.0):
     - React-Core
-    - SocureDeviceRisk (~> 4.9.0)
+    - SocureDeviceRisk (~> 4.10.0)
   - React-nativeconfig (0.75.5)
   - React-NativeModulesApple (0.75.5):
     - glog
@@ -1501,7 +1501,7 @@ PODS:
     - React-perflogger (= 0.75.5)
     - React-utils (= 0.75.5)
   - SocketRocket (0.7.0)
-  - SocureDeviceRisk (4.9.0)
+  - SocureDeviceRisk (4.10.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1742,7 +1742,7 @@ SPEC CHECKSUMS:
   React-logger: 15a50e9e2fabe5d684cdd818ff1cbd2285bab1f0
   React-Mapbuffer: 5dffd4714a7261a2fd1d94985eec118d0728b787
   React-microtasksnativemodule: 9856dcf1c3d981843197b1b75253a079d961795d
-  react-native-device-risk: 28976e23de2782b0336be94064daf2a140cb2b23
+  react-native-device-risk: 7ca6c8289c05e4daf2ccbf1a0ef151b8f5aee724
   React-nativeconfig: 237c862aab56a7426301fcbbb8dd6988745231e0
   React-NativeModulesApple: 5b3c2bcfa3a53b22da441b35189e902ede27513d
   React-perflogger: 46ce3b295add69087b7c5ff325b55a6c7af204fc
@@ -1770,7 +1770,7 @@ SPEC CHECKSUMS:
   ReactCodegen: 43d3ebb0cb9c6ffc92a254d31749fd29d69844a2
   ReactCommon: ee80ae3d276a9f1daa059169405b97c600dcba45
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  SocureDeviceRisk: f6f11b630c61388f260279b2ad3b395b1c6d05ba
+  SocureDeviceRisk: 6f647c76561835ab2c1ed9dc100f35464e89aa02
   Yoga: 1dd9dabb9df8fe08f12cd522eae04a2da0e252eb
 
 PODFILE CHECKSUM: 9a153dc534c1babf4ab508b20584d4b035d011bc
