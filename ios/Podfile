@@ -38,5 +38,17 @@ target 'DeviceRiskReactDemoApp' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # Xcode 26's Clang rejects fmt 11.0.2's consteval string validation, which
+    # RN 0.77.3 pins exactly via RCT-Folly. consteval doesn't exist in C++17, so
+    # building just this pod at c++17 sidesteps it. Scoped to fmt on purpose --
+    # the rest of React Native requires C++20.
+    installer.pods_project.targets.each do |target|
+      next unless target.name == 'fmt'
+
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+      end
+    end
   end
 end
