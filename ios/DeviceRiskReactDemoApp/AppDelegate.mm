@@ -1,26 +1,29 @@
 #import "AppDelegate.h"
 
-#import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"DeviceRiskReactDemoApp";
-  // You can add your custom initial props in the dictionary below.
-  // They will be passed down to the ViewController used by React Native.
-  self.initialProps = @{};
+  self.launchOptions = launchOptions;
 
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+  return YES;
 }
 
-- (NSURL *)bundleURL
+// MARK: UISceneSession Lifecycle
+
+- (UISceneConfiguration*) application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options
 {
-#if DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
-#else
-  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-#endif
+  // Called when a new scene session is being created.
+  // Use this method to select a configuration to create the new scene with.
+  return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+
+- (void) application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions
+{
+  // Called when the user discards a scene session.
+  // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+  // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
 @end

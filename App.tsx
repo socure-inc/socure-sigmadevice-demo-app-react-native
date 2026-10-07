@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useRef, useState } from 'react';
 import {
+  ActivityIndicator,
+  Alert,
+  StatusBar,
   StyleSheet,
-  View,
   Text,
   TouchableOpacity,
-  Alert,
-  ActivityIndicator,
-  SafeAreaView,
+  View,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   RnSigmaDevice,
   SigmaDeviceOptions,
 } from '@socure-inc/react-native-device-risk';
 import { SDKConfig } from './config';
 
-export default function App() {
-  var [resultText, setResultText] = useState('Results will be shown here.');
+function HomeScreen() {
+  const [resultText, setResultText] = useState('Results will be shown here.');
   const [isSending, setSendingData] = useState(false);
 
   // Initialize the SDK
@@ -62,7 +64,7 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.title}>SigmaDeviceRisk</Text>
       <TouchableOpacity style={styles.actionButton} onPress={onSendData}>
         <Text style={styles.actionButtonLabel}>Upload device data</Text>
@@ -76,7 +78,35 @@ export default function App() {
       <Text style={styles.resultContainer} selectable={true}>
         {resultText}
       </Text>
-    </SafeAreaView>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  const navigationContainerRef = useRef(null);
+
+  useEffect(() => {
+    return () => RnSigmaDevice.unregisterNavigationContextTracking();
+  }, []);
+
+  return (
+    <SafeAreaProvider>
+      <StatusBar barStyle="dark-content" />
+      <NavigationContainer
+        ref={navigationContainerRef}
+        onReady={() => {
+          RnSigmaDevice.registerNavigationContextTracking(
+            navigationContainerRef,
+          );
+        }}
+      >
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
