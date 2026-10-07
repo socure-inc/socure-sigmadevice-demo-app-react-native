@@ -37,6 +37,7 @@ ios/.xcode.env.local
 .gradle
 local.properties
 android.iml
+.kotlin/
 
 # Cocoapods
 #

@@ -13,3 +13,10 @@ gem 'activesupport', '>= 6.1.7.5', '!= 7.1.0'
 # dependencies (CFPropertyList, molinillo) still require them.
 gem 'nkf'
 gem 'tsort'
+
+# Ruby 3.4.0 has removed some libraries from the standard library.
+gem 'bigdecimal'
+gem 'logger'
+gem 'benchmark'
+gem 'mutex_m'
+gem 'nkf'
