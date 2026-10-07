@@ -1,27 +1,24 @@
-
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import React, { useEffect, useRef, useState } from 'react';
 import {
-  SafeAreaProvider
-} from 'react-native-safe-area-context';
-
-import React, { useEffect, useState } from 'react';
-import {
+  ActivityIndicator,
+  Alert,
+  StatusBar,
+  StyleSheet,
   Text,
   TouchableOpacity,
-  Alert,
-  ActivityIndicator
+  View,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   RnSigmaDevice,
   SigmaDeviceOptions,
 } from '@socure-inc/react-native-device-risk';
 import { SDKConfig } from './config';
 
-function HomeScreen() { 
-  var [resultText, setResultText] = useState('Results will be shown here.');
+function HomeScreen() {
+  const [resultText, setResultText] = useState('Results will be shown here.');
   const [isSending, setSendingData] = useState(false);
 
   // Initialize the SDK
@@ -65,39 +62,45 @@ function HomeScreen() {
       setSendingData(false);
     }
   };
-  
+
   return (
-  <View style={styles.container}>
-        <Text style={styles.title}>SigmaDeviceRisk</Text>
-        <TouchableOpacity style={styles.actionButton} onPress={onSendData}>
-          <Text style={styles.actionButtonLabel}>Upload device data</Text>
-        </TouchableOpacity>
-        {isSending && (
-          <View style={styles.sendingContainer}>
-            <ActivityIndicator color="#000" size="large" />
-          </View>
-        )}
-        <Text style={styles.title}>Result</Text>
-        <Text style={styles.resultContainer} selectable={true}>
-          {resultText}
-        </Text>
-      </View>
-); }
+    <View style={styles.container}>
+      <Text style={styles.title}>SigmaDeviceRisk</Text>
+      <TouchableOpacity style={styles.actionButton} onPress={onSendData}>
+        <Text style={styles.actionButtonLabel}>Upload device data</Text>
+      </TouchableOpacity>
+      {isSending && (
+        <View style={styles.sendingContainer}>
+          <ActivityIndicator color="#000" size="large" />
+        </View>
+      )}
+      <Text style={styles.title}>Result</Text>
+      <Text style={styles.resultContainer} selectable={true}>
+        {resultText}
+      </Text>
+    </View>
+  );
+}
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-  const navigationContainerRef = React.useRef(null);
+  const navigationContainerRef = useRef(null);
+
+  useEffect(() => {
+    return () => RnSigmaDevice.unregisterNavigationContextTracking();
+  }, []);
 
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      
-      <NavigationContainer ref={navigationContainerRef} 
-        onReady={() => { 
-            RnSigmaDevice.registerNavigationContextTracking(navigationContainerRef);
-          }}
+      <StatusBar barStyle="dark-content" />
+      <NavigationContainer
+        ref={navigationContainerRef}
+        onReady={() => {
+          RnSigmaDevice.registerNavigationContextTracking(
+            navigationContainerRef,
+          );
+        }}
       >
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />

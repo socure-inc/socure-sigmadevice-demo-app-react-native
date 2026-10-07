@@ -36,9 +36,24 @@
   // After upgrading to ReactNative 0.88.x we should be able to remove this line
   AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
+  // Under the scene lifecycle, cold-start URLs and user activities arrive in connectionOptions rather than
+  // launchOptions. Merge them so Linking.getInitialURL() still resolves them.
+  NSMutableDictionary *launchOptions = [NSMutableDictionary dictionaryWithDictionary:appDelegate.launchOptions ?: @{}];
+  NSURL *url = connectionOptions.URLContexts.anyObject.URL;
+  if (url) {
+    launchOptions[UIApplicationLaunchOptionsURLKey] = url;
+  }
+  NSUserActivity *userActivity = connectionOptions.userActivities.anyObject;
+  if (userActivity) {
+    launchOptions[UIApplicationLaunchOptionsUserActivityDictionaryKey] = @{
+      UIApplicationLaunchOptionsUserActivityTypeKey: userActivity.activityType,
+      @"UIApplicationLaunchOptionsUserActivityKey": userActivity,
+    };
+  }
+
   // After upgrading to ReactNative 0.88.x we should be able to replace this with the new API:
   //[_reactNativeFactory startReactNativeWithModuleName: @"DeviceRiskReactDemoApp" inWindow: self.window]
-  [_reactNativeFactory startReactNativeWithModuleName:@"DeviceRiskReactDemoApp" inWindow: self.window launchOptions:appDelegate.launchOptions];
+  [_reactNativeFactory startReactNativeWithModuleName:@"DeviceRiskReactDemoApp" inWindow: self.window launchOptions:launchOptions];
 
   [_window makeKeyAndVisible];
 
