@@ -1246,9 +1246,9 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
-  - react-native-device-risk (4.12.0):
+  - react-native-device-risk (4.12.1):
     - React-Core
-    - SocureDeviceRisk (~> 4.11.0)
+    - SocureDeviceRisk (~> 4.11.1)
   - react-native-safe-area-context (5.10.1):
     - hermes-engine
     - RCTRequired
@@ -1725,7 +1725,7 @@ PODS:
     - Yoga
   - SocketRocket (0.7.1):
     - ReactNativeDependencies
-  - SocureDeviceRisk (4.11.0)
+  - SocureDeviceRisk (4.11.1)
   - Yoga (0.0.0):
     - React-Core-prebuilt
 
@@ -2052,7 +2052,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: 295203fc648a43acf7fba609ddf573aa9fca849f
   React-microtasksnativemodule: 269f81deee27a2a9bedb6b2d1088c1ae93de9bd3
   React-mutationobservernativemodule: 877e9f730e0d8175c2e952901b55c170fc3d372f
-  react-native-device-risk: df5ea585829f06b2dcc828dbb763ce5a8eca8efe
+  react-native-device-risk: 03c789409a43b6c779f300d81202ed9f3ec8bdcf
   react-native-safe-area-context: f2bf5d3db254014a48910436c4a58ab0c4e2fe1f
   React-NativeModulesApple: adb1dd8361dff80e9f6652fb3fdbf033cfbe2a89
   React-networking: c00b437c4408f0640ba0d4158357133488521eca
@@ -2092,7 +2092,7 @@ SPEC CHECKSUMS:
   ReactNativeDependencies: 94c922c39e0e6150ee9ad05e2ca1946e0ef55783
   RNScreens: 0135deb65b65d207ee6294d0baf06681e1071d93
   SocketRocket: 37aec555668fb852ec12e3c0de59a86ca58f0871
-  SocureDeviceRisk: db1b15c4c1021628ea901ab5c0831640ec74f9a7
+  SocureDeviceRisk: bea5959bed58fefb6afe880097edad6108064a4c
   Yoga: d1c536142c5ff8ec8cd856ab2a7c227a1d875c8e
 
 PODFILE CHECKSUM: 842f735515932405340c3bd1ff248b5476786b6b
